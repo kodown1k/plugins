@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { MimosaPlugin } from './definitions';
+import type { BackgroundSpeechPlugin } from './definitions';
 
-const Mimosa = registerPlugin<MimosaPlugin>('Mimosa', {
-  web: () => import('./web').then((m) => new m.MimosaWeb()),
+const BackgroundSpeech = registerPlugin<BackgroundSpeechPlugin>('BackgroundSpeech', {
+  web: () => import('./web').then((m) => new m.BackgroundSpeechWeb()),
 });
 
 export * from './definitions';
-export { Mimosa };
+export { BackgroundSpeech };

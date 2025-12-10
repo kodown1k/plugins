@@ -1,12 +1,12 @@
 import XCTest
-@testable import MimosaPlugin
+@testable import BackgroundSpeechPlugin
 
-class MimosaTests: XCTestCase {
+class BackgroundSpeechTests: XCTestCase {
     func testEcho() {
         // This is an example of a functional test case for a plugin.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
 
-        let implementation = Mimosa()
+        let implementation = BackgroundSpeech()
         let value = "Hello, World!"
         let result = implementation.echo(value)
 

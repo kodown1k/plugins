@@ -14,7 +14,10 @@
     "pretty": true,
     "sourceMap": true,
     "strict": true,
-    "target": "es2017"
+    "target": "es2017",
+    "skipLibCheck": true,
+    "types": []
   },
-  "files": ["src/index.ts"]
+  "files": ["src/index.ts"],
+  "exclude": ["node_modules", "node_modules/@types/node", "node_modules/bun-types", "node_modules/undici-types"]
 }

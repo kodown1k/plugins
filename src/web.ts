@@ -1,10 +1,18 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { MimosaPlugin } from './definitions';
+import type { BackgroundSpeechPlugin } from './definitions';
 
-export class MimosaWeb extends WebPlugin implements MimosaPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+export class BackgroundSpeechWeb extends WebPlugin implements BackgroundSpeechPlugin {
+  async start(): Promise<void> {
+    this.unavailable('Not available on web.');
+  }
+
+  async stop(): Promise<void> {
+    this.unavailable('Not available on web.');
+  }
+
+  async updateWakePhrases(options: { phrases: string[] }): Promise<void> {
+    console.warn('updateWakePhrases not available on web.', options.phrases);
+    this.unavailable('Not available on web.');
   }
 }
